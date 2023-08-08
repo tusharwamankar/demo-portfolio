@@ -6,11 +6,11 @@ type Props = {};
 const Contact = (props: Props) => {
   return (
     <div className="h-screen flex flex-col text-center max-w-6xl px-10 mx-auto items-center justify-evenly">
-      <h3 className="mt-12 uppercase tracking-[15px] font-semibold text-gray-400 text-xl ">
+      {/* <h3 className="mt-12 uppercase tracking-[15px] font-semibold text-gray-400 text-xl ">
         Contact
-      </h3>
+      </h3> */}
       <div className="flex flex-col space-y-10 ">
-        <h4 className="text-2xl">
+        <h4 className="text-2xl my-4">
           Let&apos;s <span className="text-red-300">Talk</span>
         </h4>
       </div>
@@ -57,6 +57,12 @@ const Contact = (props: Props) => {
           Submit
         </button>
       </form>
+      <a
+        href="#about"
+        className=" mx-4 uppercase tracking-[3px] text-[#242424] border-2 border-[#242424] hover:border-cyan-600 rounded-3xl px-4 py-2 font-semibold text-sm hover:text-cyan-400"
+      >
+        Home
+      </a>
     </div>
   );
 };

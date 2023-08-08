@@ -36,7 +36,7 @@ const Hero = (props: Props) => {
             href="#about"
             className="mx-4 uppercase tracking-[3px] text-gray-400 font-semibold text-sm hover:text-cyan-400"
           >
-            About
+            Home
           </a>
           <a
             href="#projects"
@@ -82,15 +82,15 @@ const Hero = (props: Props) => {
           ></SocialIcon>
         </motion.div>
       </nav>
-      <div className="flex items-center justify-around max-w-5xl mx-auto text-center h-4/6">
+      <div className="flex flex-col md:flex-row items-center justify-around max-w-5xl mx-auto text-center h-4/6">
         <div className="flex items-center justify-center mx-32">
           {/* image */}
           <Image
             src="/avatar.png"
-            width={300}
             height={300}
+            width={300}
             alt="avatar"
-            className="rounded-full  "
+            className="rounded-full hidden md:flex"
           />
         </div>
         <div className="flex flex-col gap-7 w-4/5 text-left">
@@ -105,9 +105,9 @@ const Hero = (props: Props) => {
           I am a highly motivated individual who is always eager to learn and improve. I reside in Bhopal, famously known as the City of Lakes. Currently, I am pursuing my Masters in Computer Applications from NIT Kurukshetra, one of the most prestigious technical institutions in India. 
           </p>
           <div className="">
-            <button className="bg-cyan-400 px-6 py-2 border-2 border-cyan-500 rounded-xl text-black cursor-pointer hover:bg-[#242424] hover:text-white">
+            <a href="My_Resume.pdf" target="#" className="bg-cyan-400 px-6 py-2 border-2 border-cyan-500 rounded-xl text-black cursor-pointer hover:bg-[#242424] hover:text-white">
               Resume
-            </button>
+            </a>
           </div>
           <div className="">
             <SocialIcon
