@@ -5,31 +5,31 @@ type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <div className="h-screen flex relative flex-col text-center max-w-6xl px-10 mx-auto items-center justify-evenly">
-      {/* <h3 className="absolute top-24 uppercase tracking-[15px] font-semibold text-gray-400 text-xl ">
+    <div className="h-screen flex flex-col text-center max-w-6xl px-10 mx-auto items-center justify-evenly">
+      <h3 className="mt-12 uppercase tracking-[15px] font-semibold text-gray-400 text-xl ">
         Contact
-      </h3> */}
+      </h3>
       <div className="flex flex-col space-y-10 ">
         <h4 className="text-2xl">
-          Let's <span className="text-red-300">Talk</span>
+          Let&apos;s <span className="text-red-300">Talk</span>
         </h4>
       </div>
       <div className="flex flex-col space-y-10">
-        <div className="flex flex-row items-center gap-10">
+        <div className="flex flex-row items-center gap-3 md:gap-7">
           <PhoneIcon className="h-[40px] text-[#E27508] animate-pulse" />
           <p>+917049258342</p>
         </div>
-        <div className="flex flex-row items-center gap-10">
+        <div className="flex flex-row items-center gap-3 md:gap-7">
           <EnvelopeIcon className="h-[40px] text-[#E27508] animate-pulse" />
           <p>tusharwamankar10@gmail.com</p>
         </div>
-        <div className="flex flex-row items-center gap-10">
+        <div className="flex flex-row items-center gap-3 md:gap-7">
           <MapPinIcon className="h-[40px] text-[#E27508] animate-pulse" />
           <p>NIT Kurukshetra, Haryana</p>
         </div>
       </div>
-      <form className="flex flex-col space-y-3 w-fit mx-auto">
-        <div className="flex space-x-3">
+      <form className="flex flex-col space-y-3 w-fit mx-auto my-4 mb-10 md:mb-4 ">
+        <div className="flex space-y-3 flex-col sm:flex-row sm:space-x-3 sm:space-y-0">
           <input
             placeholder="First Name"
             type="text"
