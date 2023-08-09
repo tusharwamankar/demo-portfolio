@@ -1,9 +1,22 @@
 import React from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+type Inputs = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
 
 type Props = {};
 
 const Contact = (props: Props) => {
+  const { register, handleSubmit } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (FormData) => {
+    window.location.href = `mailto:tusharwamankar10@gmail.com?subject=${FormData.subject}&body=Hi, ${FormData.name} here. ${FormData.message} (${FormData.email})`;
+  };
+
   return (
     <div className="h-screen flex flex-col text-center max-w-6xl px-10 mx-auto items-center justify-evenly">
       {/* <h3 className="mt-12 uppercase tracking-[15px] font-semibold text-gray-400 text-xl ">
@@ -11,49 +24,56 @@ const Contact = (props: Props) => {
       </h3> */}
       <div className="flex flex-col space-y-10 ">
         <h4 className="text-2xl my-4">
-          Let&apos;s <span className="text-red-300">Talk</span>
+          Let&apos;s <span className="text-cyan-500">Talk</span>
         </h4>
       </div>
       <div className="flex flex-col space-y-10">
         <div className="flex flex-row items-center gap-3 md:gap-7">
-          <PhoneIcon className="h-[40px] text-[#E27508] animate-pulse" />
+          <PhoneIcon className="contact-icons" />
           <p>+917049258342</p>
         </div>
         <div className="flex flex-row items-center gap-3 md:gap-7">
-          <EnvelopeIcon className="h-[40px] text-[#E27508] animate-pulse" />
+          <EnvelopeIcon className="contact-icons" />
           <p>tusharwamankar10@gmail.com</p>
         </div>
         <div className="flex flex-row items-center gap-3 md:gap-7">
-          <MapPinIcon className="h-[40px] text-[#E27508] animate-pulse" />
+          <MapPinIcon className="contact-icons" />
           <p>NIT Kurukshetra, Haryana</p>
         </div>
       </div>
-      <form className="flex flex-col space-y-3 w-fit mx-auto my-4 mb-10 md:mb-4 ">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-col space-y-3 w-fit mx-auto my-4 mb-10 md:mb-4 "
+      >
         <div className="flex space-y-3 flex-col sm:flex-row sm:space-x-3 sm:space-y-0">
           <input
-            placeholder="First Name"
+            {...register("name")}
+            placeholder="Name"
             type="text"
-            className="outline-none bg-slate-400/10 p-2 text-gray-400 focus:text-[#cfb8b8] border-b focus:border-[#EE851D] rounded"
+            className="form-inputs"
           />
           <input
-            placeholder="Last Name"
-            type="text"
-            className="outline-none bg-slate-400/10 p-2 text-gray-400 focus:text-[#cfb8b8] border-b focus:border-[#EE851D] rounded"
+            {...register("email")}
+            placeholder="Email"
+            type="email"
+            className="form-inputs"
           />
         </div>
 
         <input
-          placeholder="Email"
+          {...register("subject")}
+          placeholder="Subject"
           type="text"
-          className="outline-none bg-slate-400/10 p-2 text-gray-400 focus:text-[#cfb8b8] border-b focus:border-[#EE851D] rounded"
+          className="form-inputs"
         />
 
         <textarea
+          {...register("message")}
           placeholder="Message"
-          className="outline-none bg-slate-400/10 p-2 text-gray-400 focus:text-[#cfb8b8] border-b focus:border-[#EE851D] rounded"
+          className="form-inputs"
         ></textarea>
 
-        <button className="bg-[#f5883a] p-3 rounded border-none text-black font-bold tracking-[2px]">
+        <button className="bg-cyan-500 p-3 uppercase rounded border-none text-black font-semibold tracking-[2px]">
           Submit
         </button>
       </form>

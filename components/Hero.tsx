@@ -2,20 +2,19 @@ import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Cursor ,useTypewriter } from "react-simple-typewriter";
-
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 type Props = {};
 
 const Hero = (props: Props) => {
   const [text, count] = useTypewriter({
     words: ["Web Developer", "C++ Coder"],
-    loop:true,
-    delaySpeed:2000,
-  })
+    loop: true,
+    delaySpeed: 2000,
+  });
   return (
     <header className="h-screen">
-      <nav className="sticky top-0 flex justify-between max-w-6xl mx-auto p-5">
+      <nav className="sticky top-0 flex justify-between max-w-6xl mx-auto p-8">
         <motion.div
           initial={{
             x: -500,
@@ -34,15 +33,9 @@ const Hero = (props: Props) => {
         >
           <a
             href="#about"
-            className="mx-4 uppercase tracking-[3px] text-gray-400 font-semibold text-sm hover:text-cyan-400"
+            className="navbar-icons"
           >
             Home
-          </a>
-          <a
-            href="#projects"
-            className="mx-4 uppercase tracking-[3px] text-gray-400 font-semibold text-sm hover:text-cyan-400"
-          >
-            Projects
           </a>
           <a
             href="#skills"
@@ -51,38 +44,21 @@ const Hero = (props: Props) => {
             Skills
           </a>
           <a
+            href="#projects"
+            className="mx-4 uppercase tracking-[3px] text-gray-400 font-semibold text-sm hover:text-cyan-400"
+          >
+            Projects
+          </a>
+          <a
             href="#contact"
             className="mx-4 uppercase tracking-[3px] text-gray-400 font-semibold text-sm hover:text-cyan-400"
           >
             Contact
           </a>
         </motion.div>
-        <motion.div
-          initial={{
-            x: 500,
-            opacity: 0,
-            scale: 0.5,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          className="flex items-center"
-        >
-          <SocialIcon
-            network="email"
-            url="mailto:tusharwamankar10@gmail.com"
-            className="cursor-pointer"
-            fgColor="gray"
-            bgColor="transparent"
-          ></SocialIcon>
-        </motion.div>
+        <motion.div></motion.div>
       </nav>
-      <div className="flex flex-col md:flex-row items-center justify-around max-w-5xl mx-auto text-center h-4/6">
+      <div className="flex flex-col md:flex-row items-center md:my-12 justify-around max-w-5xl mx-auto text-center h-4/6">
         <div className="flex items-center justify-center mx-32">
           {/* image */}
           <Image
@@ -102,36 +78,68 @@ const Hero = (props: Props) => {
             Tushar Wamankar
           </h1>
           <p className="text-white/80 leading-7">
-          I am a highly motivated individual who is always eager to learn and improve. I reside in Bhopal, famously known as the City of Lakes. Currently, I am pursuing my Masters in Computer Applications from NIT Kurukshetra, one of the most prestigious technical institutions in India. 
+            I am a highly motivated individual who is always eager to learn and
+            improve. I reside in Bhopal, famously known as the City of Lakes.
+            Currently, I am pursuing my Masters in Computer Applications from
+            NIT Kurukshetra, one of the most prestigious technical institutions
+            in India.
           </p>
           <div className="">
-            <a href="My_Resume.pdf" target="#" className="bg-cyan-400 px-6 py-2 border-2 border-cyan-500 rounded-xl text-black cursor-pointer hover:bg-[#242424] hover:text-white">
+            <a
+              href="My_Resume.pdf"
+              target="#"
+              className="bg-cyan-500 px-6 py-2 border-2 border-cyan-500 rounded-xl text-black cursor-pointer hover:bg-[#242424] hover:text-white duration-300"
+            >
               Resume
             </a>
           </div>
-          <div className="">
+          <motion.div
+            initial={{
+              x: 500,
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1,
+            }}
+            className="flex items-center"
+          >
             <SocialIcon
               url="https://github.com/tusharwamankar"
               bgColor="transparent"
               fgColor="gray"
-              className=""
+              className="social-icons"
             ></SocialIcon>
             <SocialIcon
               url="https://www.linkedin.com/in/tushar-wamankar-430090216/"
               bgColor="transparent"
               fgColor="gray"
+              className="social-icons"
+            ></SocialIcon>
+            <SocialIcon
+              network="email"
+              url="mailto:tusharwamankar10@gmail.com"
+              fgColor="gray"
+              className="social-icons"
+              bgColor="transparent"
             ></SocialIcon>
             <SocialIcon
               url="https://api.whatsapp.com/send/?phone=917049258342&text&type=phone_number&app_absent=0"
               bgColor="transparent"
               fgColor="gray"
+              className="social-icons"
             ></SocialIcon>
             {/* <SocialIcon
               url="https://www.instagram.com/__rahsut__/"
               bgColor="transparent"
               fgColor="gray"
             ></SocialIcon> */}
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* <div className="flex gap-8 justify-center mt-20 flex-wrap">
