@@ -2,7 +2,13 @@ import React from "react";
 import UseAnimations from "react-useanimations";
 import menu from "react-useanimations/lib/menu2";
 import { AiFillHtml5 } from "react-icons/ai";
-import { BiSolidFileCss, BiLogoJavascript, BiLogoPython, BiLogoReact, BiLogoTailwindCss } from "react-icons/bi";
+import {
+  BiSolidFileCss,
+  BiLogoJavascript,
+  BiLogoPython,
+  BiLogoReact,
+  BiLogoTailwindCss,
+} from "react-icons/bi";
 import { TbBrandCpp, TbBrandVscode } from "react-icons/tb";
 import { PiFileSqlDuotone } from "react-icons/pi";
 
@@ -24,7 +30,6 @@ const Skills = (props: Props) => {
         <PiFileSqlDuotone size={56} />
         <BiLogoReact size={56} />
         <TbBrandVscode size={56} />
-
       </div>
     </div>
   );
