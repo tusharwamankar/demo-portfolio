@@ -14,8 +14,8 @@ const Hero = (props: Props) => {
     delaySpeed:2000,
   })
   return (
-    <header className="h-screen  ">
-      <nav className="sticky top-0 flex justify-between max-w-6xl mx-auto p-5 ">
+    <header className="h-screen">
+      <nav className="sticky top-0 flex justify-between max-w-6xl mx-auto p-5">
         <motion.div
           initial={{
             x: -500,
@@ -30,7 +30,7 @@ const Hero = (props: Props) => {
           transition={{
             duration: 1,
           }}
-          className="social flex items-center "
+          className="social flex items-center"
         >
           <a
             href="#about"
@@ -96,7 +96,7 @@ const Hero = (props: Props) => {
         <div className="flex flex-col gap-7 w-4/5 text-left">
           {/* description */}
           <h3 className="text-2xl">
-            Hi, i'm <span className="text-cyan-500">{text}</span>
+            Hi, i&apos;m <span className="text-cyan-500">{text}</span>
           </h3>
           <h1 className="text-5xl font-semibold text-cyan-500">
             Tushar Wamankar
