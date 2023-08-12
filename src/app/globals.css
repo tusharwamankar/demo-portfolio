@@ -3,18 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --bggray: 36,36,36;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -27,14 +28,23 @@ body {
 }
 
 .social-icons {
-  @apply cursor-pointer border-[#242424] hover:border-2;
+  @apply cursor-pointer border-[#242424] border-2 hover:border-none duration-100;
 }
 .navbar-icons {
-  @apply mx-4 uppercase tracking-[3px] text-gray-400 font-semibold text-sm hover:text-cyan-400 duration-150;
+  @apply mx-3 md:mx-4 uppercase tracking-[3px] text-gray-400 font-semibold text-sm hover:text-cyan-400 duration-150;
 } 
 .contact-icons {
   @apply h-[30px] text-cyan-500 animate-pulse;
 }
 .form-inputs {
   @apply outline-none bg-slate-400/10 p-2 text-gray-300 focus:text-white border-b focus:border-cyan-500 rounded;
+}
+
+.imgtag
+{
+  @apply cursor-pointer p-1 hover:p-0 duration-500
+}
+.homepage{
+  background-color: var(--bggray);
+  color: white;
 }

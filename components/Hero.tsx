@@ -13,7 +13,7 @@ const Hero = (props: Props) => {
     delaySpeed: 2000,
   });
   return (
-    <div className="flex flex-col md:flex-row items-center md:my-12 justify-around max-w-5xl mx-auto text-center my-auto h-screen">
+    <div className="flex flex-col md:flex-row items-center md:my-12 gap-4 max-w-5xl mx-auto text-center my-auto h-screen">
       <div className="flex items-center justify-center mx-32">
         {/* image */}
         <Image
@@ -24,7 +24,7 @@ const Hero = (props: Props) => {
           className="rounded-full mt-16 p-4 md:mt-0 md:p-0"
         />
       </div>
-      <div className="flex flex-col gap-7 w-4/5 text-left">
+      <div className="flex flex-col gap-5 md:gap-7 w-4/5 text-left">
         {/* description */}
         <h3 className="text-2xl">
           Hi, i&apos;m{" "}
@@ -32,10 +32,10 @@ const Hero = (props: Props) => {
             {text} <span className="animate-ping">|</span>{" "}
           </span>
         </h3>
-        <h1 className="text-5xl font-semibold text-cyan-500">
+        <h1 className="text-4xl md:text-5xl font-semibold text-cyan-500">
           Tushar Wamankar
         </h1>
-        <p className="text-white/80 leading-7">
+        <p className="text-white/80 leading-7 text-sm md:text-lg">
           I am a highly motivated individual who is always eager to learn and
           improve. I reside in Bhopal, famously known as the City of Lakes.
           Currently, I am pursuing my Masters in Computer Applications from NIT

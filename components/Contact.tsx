@@ -29,15 +29,24 @@ const Contact = (props: Props) => {
       </div>
       <div className="flex flex-col space-y-10">
         <div className="flex flex-row items-center gap-3 md:gap-7">
-          <PhoneIcon className="contact-icons" />
+          <PhoneIcon
+            onClick={() => parent.open("tel:+917049258342")}
+            className="contact-icons cursor-pointer"
+          />
           <p>+917049258342</p>
         </div>
         <div className="flex flex-row items-center gap-3 md:gap-7">
-          <EnvelopeIcon className="contact-icons" />
+          <EnvelopeIcon
+            onClick={() => parent.open("mailto:tusharwamankar10@gmail.com")}
+            className="contact-icons cursor-pointer"
+          />
           <p>tusharwamankar10@gmail.com</p>
         </div>
         <div className="flex flex-row items-center gap-3 md:gap-7">
-          <MapPinIcon className="contact-icons" />
+          <MapPinIcon
+            onClick={() => parent.open("https://goo.gl/maps/JbUFVWmLFURVsbmq6")}
+            className="contact-icons cursor-pointer"
+          />
           <p>NIT Kurukshetra, Haryana</p>
         </div>
       </div>
@@ -77,7 +86,6 @@ const Contact = (props: Props) => {
           Submit
         </button>
       </form>
-      
     </div>
   );
 };
