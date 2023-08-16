@@ -82,7 +82,7 @@ const Contact = (props: Props) => {
           className="form-inputs"
         ></textarea>
 
-        <button className="bg-cyan-500 p-3 uppercase rounded border-none text-black font-semibold tracking-[2px]">
+        <button className="bg-cyan-500 p-3 uppercase rounded border-none text-black font-semibold tracking-[2px] ">
           Submit
         </button>
       </form>
