@@ -29,7 +29,7 @@ const Projects = (props: Props) => {
           />
           <div className="text-cener flex flex-col gap-5 justify-start h-[50%]">
             <a
-              onClick={() => parent.open("https://www.tusharwamankar.me/")}
+              onClick={() => parent.open("https://portfolio-lkqugqdvj-tusharwamankar.vercel.app/")}
               className="font-semibold text-cyan-100/80 uppercase text-2xl tracking-widest cursor-pointer"
             >
               Portfolio
@@ -83,7 +83,7 @@ const Projects = (props: Props) => {
           />
           <div className="text-cener flex flex-col gap-5 justify-start h-[50%]">
             <a
-              onClick={() => parent.open("https://do-share-pic.vercel.app/")}
+              onClick={() => parent.open("https://do-share.vercel.app/")}
               className="font-semibold text-cyan-100/80 uppercase text-2xl tracking-widest cursor-pointer"
             >
               DoShare

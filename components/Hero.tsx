@@ -74,7 +74,7 @@ const Hero = (props: Props) => {
             className="social-icons"
           ></SocialIcon>
           <SocialIcon
-            url="https://www.linkedin.com/in/tushar-wamankar-430090216/"
+            url="https://www.linkedin.com/in/tusharwamankar/"
             bgColor="transparent"
             fgColor="gray"
             className="social-icons"
